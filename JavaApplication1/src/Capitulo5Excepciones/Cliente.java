@@ -60,6 +60,10 @@ public class Cliente {
                 validar.ChecarEdadNegativa(edad);
         this.edad = edad;
     }
-    
+    public static void setMenorEdad(int edad) throws ValorMenorDeEdadException {
+        ValidarMenorEdad validar=new ValidadMenorEdad();
+                validar.ChecarMenorEdad(edad);
+                this.menoredad = menoredad;
+    }
    }
 

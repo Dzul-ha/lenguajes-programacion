@@ -13,4 +13,8 @@ public class ValidarEdad {
     public void ChecarEdadNegativa(int edad)throws ValorNoNegativoException{
         if(edad<0)throw new ValorNoNegativoException();
     }
+    
+    public void ChecarMenorEdad (int edad)throws ValorMenorDeEdadException{
+        if(edad<18)throw new ValorMenorDeEdadException();
+    }
 }

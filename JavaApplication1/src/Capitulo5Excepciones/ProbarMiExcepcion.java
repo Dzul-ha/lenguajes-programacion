@@ -17,8 +17,15 @@ public class ProbarMiExcepcion {
         try {
             Cliente c=new Cliente();
             c.setEdad(-19);
-        } catch (ValorNoNegativoException ex) {
-            System.out.println(ex.getMessage());    
+            ValidarEdad valida=new ValidarEdad();
+            valida.ChecarEdadNegativa(-18);
+            ValidarValida.ChecarMenorEdad(<18);
+        }catch (ValorNoNegativoException ex) {
+            System.out.println(ex.getMessage());
+            
+         catch (ValorMenorDeEdadException ex) {
+            System.out.println(e.getMessage());        
+                    }
         }finally{
             System.out.println("Este siempre se ejecuta se lance o no la e");
         }

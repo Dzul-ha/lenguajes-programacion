@@ -9,7 +9,15 @@ package Capitulo5Excepciones;
  *
  * @author T-101
  */
-public class ValorMenorDeEdadException {
-    public void ValorMenorDeEdadException
+public class ValorMenorDeEdadException extends Exception{
+    
+    /**
+     *
+     */
+    public ValorMenorDeEdadException(){
+        super("No puede acceder un menor de edad");
+    }
     
 }
+
+
