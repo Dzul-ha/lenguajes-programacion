@@ -19,17 +19,30 @@ public class MiPrimeraConexion {
         HttpURLConnection con=(HttpURLConnection) url.openConnection();
         //obtiene los datos
         InputStream input=con.getInputStream();
+        
         InputStreamReader isr=new InputStreamReader (input);
-        //lee renglon por renglon
         BufferedReader reader=new BufferedReader(isr);
-        int renglones=0;
-             boolean encontrado=false;
-         String temperaturas[]=new String[5];
-        while(reader.readLine() !=null){
-         String renglonActual=reader.readLine();
-            if(renglonActual.contains("Outside Te")){
+        String lineaActual="no ha leido nada";
+        boolean encontrado=false;
+        int miLinea=0;
+        while((lineaActual=reader.readLine())!=null){
+         if(encontrado&&miLinea<=4){
+             //vamos a despedasar la línea
+             int indice= lineaActual.indexOf(">");
+             int indice2= lineaActual.indexOf("</");
+             String tempActual=lineaActual.substring(indice+1, indice2);
+             
+             System.out.println(tempActual);
+             miLinea++;
+         }
+               if(lineaActual.contains("Outside Temp")){
                 encontrado=true;
-                System.out.println("Si existe este renglon");
+                System.out.println("dato encontrado");
+                
+            //String renglonActual=reader.readLine();
+            //if(renglonActual.contains("Outside Te")){
+              //  encontrado=true;
+               // System.out.println("Si existe este renglon");
             }
                      
          //if(reader.readLine().contains("Current Conditions as of") ||renglones==100){
