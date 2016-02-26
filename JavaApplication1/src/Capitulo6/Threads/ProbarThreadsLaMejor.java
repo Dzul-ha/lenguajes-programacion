@@ -36,14 +36,14 @@ public class ProbarThreadsLaMejor {
             @Override
             public void run() {
              while(true){
-                System.err.println(" Todos vamos a morir!!");
+                System.out.println(" Todos vamos a morir!!");
                 try {
                     Thread.sleep(1000);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(ProbarMisThreads.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }   
-            }
+            }            
         });
        
         t1.start();
