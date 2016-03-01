@@ -17,7 +17,7 @@ public class GenerarClientes {
     public static Clientes[] obtenerCliente(){
      Clientes cliente[]=new Clientes[3];
      cliente[0]=new Clientes("Ana", "Lopez", 20, 2000, new Direccion("sur 11", 20,"Ecatepunk", null));
-     cliente[1]=new Clientes();
+     cliente[1]=new Clientes(null, null, edad, sueldo, null);
      cliente[3]=new Clientes();
      //Ajustamos los nombres
      cliente[0].setNombre(" Ana");
