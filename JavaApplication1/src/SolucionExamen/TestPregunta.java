@@ -20,6 +20,8 @@ public class TestPregunta {
         opciones[1]=op2;
         opciones[2]=op3;
         opciones[3]=op4;
+        ValidarOpcion validar=new ValidarOpcion();
+        validar.validar(opciones);
         Pregunta p=new Pregunta("Capital de rusia", opciones);
     }
 }
