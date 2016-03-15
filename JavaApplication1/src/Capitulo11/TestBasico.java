@@ -25,7 +25,7 @@ public class TestBasico extends javax.swing.JFrame {
         radio1.setText(preguntas.get(0).getOpciones().get(1).getTitulo());
         radio2.setText(preguntas.get(0).getOpciones().get(2).getTitulo());
         radio3.setText(preguntas.get(0).getOpciones().get(3).getTitulo());
-        radio0.isSelecte
+        radio0.isSelected()
     }
 
     /**
