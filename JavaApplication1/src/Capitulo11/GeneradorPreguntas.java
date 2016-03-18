@@ -10,6 +10,7 @@ package Capitulo11;
  * @author T-101
  */
 import java.util.*;
+import javax.swing.JRadioButton;
 public class GeneradorPreguntas {
     
 public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
@@ -17,6 +18,7 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     Opcion o1=new Opcion("Moscu", true);
     Opcion o2=new Opcion("Florencia",false);
     Opcion o3=new Opcion("Paris",false);
+     Opcion o4=new Opcion("Mizcalco",false);
     
     Opcion o4p2=new Opcion("Tokio", false);
     Opcion o5p2=new Opcion("Beijin", true);
@@ -27,6 +29,8 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     opciones.add(o1);
     opciones.add(o2);
     opciones.add(o3);
+      opciones.add(o4);
+    
          
     
     ArrayList<Opcion> opciones2=new ArrayList<Opcion>();
@@ -47,4 +51,20 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
       
     }
     
+
+public static boolean checarRespuesta(Pregunta p,JRadioButton[] radios){
+boolean respuesta=false;
+String seleccion="";
+for(JRadioButton radio:radios){
+if(radio.isSelected()){
+seleccion= radio.getText();
+}
+}
+for(Opcion o:p.getOpciones()){
+if(o.isEstatus()){
+if(o.getTitulo().equals(seleccion))respuesta=true;
+}
+}
+return respuesta;
+}
 }

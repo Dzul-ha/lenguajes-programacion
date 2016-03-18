@@ -6,26 +6,36 @@
 package Capitulo11;
 
 import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JRadioButton;
 
 /**
  *
  * @author T-101
  */
 public class TestBasico extends javax.swing.JFrame {
+    ArrayList<Pregunta> preguntas;
+    JRadioButton radios[]=new JRadioButton[4];
 
     /**
      * Creates new form TestBasico
      */
     public TestBasico() {
         initComponents();
-        ArrayList<Pregunta>preguntas=GeneradorPreguntas.obtenerTodasLasPeguntas();
+        radios[0]=radio0;
+        radios[1]=radio1;
+        radios[2]=radio2;
+        radios[3]=radio3;
+        
+        preguntas=GeneradorPreguntas.obtenerTodasLasPeguntas();
+              
         pregunta.setText(preguntas.get(0).getTitulo());
         
         radio0.setText(preguntas.get(0).getOpciones().get(0).getTitulo());
         radio1.setText(preguntas.get(0).getOpciones().get(1).getTitulo());
         radio2.setText(preguntas.get(0).getOpciones().get(2).getTitulo());
         radio3.setText(preguntas.get(0).getOpciones().get(3).getTitulo());
-        radio0.isSelected()
+      
     }
 
     /**
@@ -63,6 +73,11 @@ public class TestBasico extends javax.swing.JFrame {
         radio3.setText("jRadioButton4");
 
         jButton1.setText("checar respuesta");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("ir a siguiente pregunta");
 
@@ -109,6 +124,14 @@ public class TestBasico extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        
+       boolean respuesta=GeneradorPreguntas.checarRespuesta(preguntas.get(0),radios);
+       
+       JOptionPane.showMessageDialog(rootPane, " Respuesta:"+respuesta);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
