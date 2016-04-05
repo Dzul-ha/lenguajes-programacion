@@ -6,8 +6,11 @@
 package Capitulo11;
 
 import java.util.ArrayList;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 import javax.swing.JRadioButton;
+
 
 /**
  *
@@ -17,6 +20,7 @@ public class TestBasico extends javax.swing.JFrame {
     ArrayList<Pregunta> preguntas;
     JRadioButton radios[]=new JRadioButton[4];
     int numero=0;
+    int x=60;
 
     /**
      * Creates new form TestBasico
@@ -25,20 +29,42 @@ public class TestBasico extends javax.swing.JFrame {
         preguntas=GeneradorPreguntas.obtenerTodasLasPeguntas();
         initComponents();
         
-        radios[0]=radio0;
-        radios[1]=radio1;
-        radios[2]=radio2;
-        radios[3]=radio3;
+        Thread t1=new Thread(new Runnable() {
+           @Override
+            public void run() {
+                while(true) {
+                    x--;
+                    if(x<=0) dispose();
+                    etiquetaReloj.setText(""+x);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(TestBasico.class.getName()).log(Level.SEVERE, null, ex);
+                        
+                    }
+            }
+            }
+        
+   });
+        t1.start();
+        
+        iniciarTodas();
+            
+        
+       // radios[0]=radio0;
+       // radios[1]=radio1;
+        //radios[2]=radio2;
+        //radios[3]=radio3;
         
         
               
         
-        iniciarTodas();
+       // iniciarTodas();
         
-        radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
-        radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
-        radio2.setText(preguntas.get(numero).getOpciones().get(2).getTitulo());
-        radio3.setText(preguntas.get(numero).getOpciones().get(3).getTitulo());
+       // radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
+        //radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
+        //radio2.setText(preguntas.get(numero).getOpciones().get(2).getTitulo());
+        //radio3.setText(preguntas.get(numero).getOpciones().get(3).getTitulo());
       
     }
 
