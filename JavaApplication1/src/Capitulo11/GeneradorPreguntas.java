@@ -21,7 +21,7 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
      Opcion o4=new Opcion("Mizcalco",false);
     
     Opcion o4p2=new Opcion("Tokio", false);
-    Opcion o5p2=new Opcion("Beijin", true);
+    Opcion o5p2=new Opcion("Beijing", true);
     Opcion o6p2=new Opcion("Seul", false);
     Opcion o7p2=new Opcion("Pyonjiang", false);
     

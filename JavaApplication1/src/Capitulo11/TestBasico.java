@@ -203,7 +203,7 @@ public class TestBasico extends javax.swing.JFrame {
         radios[3]=radio3;
         ArrayList<Pregunta> preguntas=GeneradorPreguntas.obtenerTodasLasPeguntas();
                       
-        pregunta.setText(preguntas.get(0).getTitulo());
+        pregunta.setText(preguntas.get(numero).getTitulo());        
         
         radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
         radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
