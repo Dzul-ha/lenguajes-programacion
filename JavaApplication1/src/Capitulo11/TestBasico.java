@@ -30,6 +30,7 @@ public class TestBasico extends javax.swing.JFrame {
         initComponents();
         
         Thread t1=new Thread(new Runnable() {
+            private Object etiquetaReloj;
            @Override
             public void run() {
                 while(true) {
