@@ -52,20 +52,20 @@ public class TestBasico extends javax.swing.JFrame {
         iniciarTodas();
             
         
-       // radios[0]=radio0;
-       // radios[1]=radio1;
-        //radios[2]=radio2;
-        //radios[3]=radio3;
+        radios[0]=radio0;
+        radios[1]=radio1;
+        radios[2]=radio2;
+        radios[3]=radio3;
         
         
               
         
-       // iniciarTodas();
+        iniciarTodas();
         
-       // radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
-        //radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
-        //radio2.setText(preguntas.get(numero).getOpciones().get(2).getTitulo());
-        //radio3.setText(preguntas.get(numero).getOpciones().get(3).getTitulo());
+        radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
+        radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
+        radio2.setText(preguntas.get(numero).getOpciones().get(2).getTitulo());
+        radio3.setText(preguntas.get(numero).getOpciones().get(3).getTitulo());
       
     }
 
