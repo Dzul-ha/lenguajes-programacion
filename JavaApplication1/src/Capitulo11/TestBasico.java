@@ -31,7 +31,7 @@ public class TestBasico extends javax.swing.JFrame {
         
        
        t1.start();
-        
+               
         iniciarTodas();
             
         
