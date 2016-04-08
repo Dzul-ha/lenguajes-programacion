@@ -29,24 +29,8 @@ public class TestBasico extends javax.swing.JFrame {
         preguntas=GeneradorPreguntas.obtenerTodasLasPeguntas();
         initComponents();
         
-        Thread t1=new Thread(new Runnable() {
-           @Override
-            public void run() {
-                while(true) {
-                    x--;
-                    if(x<=0) dispose();
-                    etiquetaReloj.setText(""+x);
-                    try {
-                        Thread.sleep(1000);
-                    } catch (InterruptedException ex) {
-                        Logger.getLogger(TestBasico.class.getName()).log(Level.SEVERE, null, ex);
-                        
-                    }
-            }
-            }
-        
-   });
-        t1.start();
+       
+       t1.start();
         
         iniciarTodas();
             
@@ -59,7 +43,7 @@ public class TestBasico extends javax.swing.JFrame {
         
               
         
-        iniciarTodas();
+      
         
         radio0.setText(preguntas.get(numero).getOpciones().get(0).getTitulo());
         radio1.setText(preguntas.get(numero).getOpciones().get(1).getTitulo());
@@ -85,6 +69,7 @@ public class TestBasico extends javax.swing.JFrame {
         radio3 = new javax.swing.JRadioButton();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
+        etiquetaReloj = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -116,6 +101,8 @@ public class TestBasico extends javax.swing.JFrame {
             }
         });
 
+        etiquetaReloj.setText("etiquetaReloj");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -123,7 +110,10 @@ public class TestBasico extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(pregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(pregunta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(etiquetaReloj))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(radio3)
@@ -141,7 +131,9 @@ public class TestBasico extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(pregunta)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(pregunta)
+                    .addComponent(etiquetaReloj))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(radio0)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -170,6 +162,23 @@ public class TestBasico extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
+        Thread t1=new Thread(new Runnable() {
+           @Override
+            public void run() {
+                while(true) {
+                    x--;
+                    if(x<=0) dispose();
+                    etiquetaReloj.setText(""+x);
+                    try {
+                        Thread.sleep(1000);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(TestBasico.class.getName()).log(Level.SEVERE, null, ex);
+                        
+                    }
+            }
+            }
+        
+   });
         numero++;
        iniciarTodas();       
     }//GEN-LAST:event_jButton2ActionPerformed
@@ -211,6 +220,7 @@ public class TestBasico extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JLabel etiquetaReloj;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel pregunta;

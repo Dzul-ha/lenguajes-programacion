@@ -30,6 +30,16 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     Opcion o10p3=new Opcion("CDMX", true);
     Opcion o11p3=new Opcion("Puebla", false);
     
+    Opcion o12p4=new Opcion("Jalisco", true);
+    Opcion o13p4=new Opcion("Yucatán", false);
+    Opcion o14p4=new Opcion("CDMX", false);
+    Opcion o15p4=new Opcion("Puebla", false);
+    
+    Opcion o16p5=new Opcion("Jalisco", true);
+    Opcion o17p5=new Opcion("Yucatán", false);
+    Opcion o18p5=new Opcion("CDMX", false);
+    Opcion o19p5=new Opcion("Puebla", false);
+    
     ArrayList<Opcion> opciones=new ArrayList<Opcion>();
     opciones.add(o1);
     opciones.add(o2);
@@ -48,15 +58,30 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     opciones3.add(o10p3);
     opciones3.add(o11p3);
     
+    ArrayList<Opcion> opciones4=new ArrayList<Opcion>();
+    opciones4.add(o12p4);
+    opciones4.add(o13p4);
+    opciones4.add(o14p4);
+    opciones4.add(o15p4);
+    
+    ArrayList<Opcion> opciones5=new ArrayList<Opcion>();
+    opciones5.add(o16p5);
+    opciones5.add(o17p5);
+    opciones5.add(o18p5);
+    opciones5.add(o19p5);
+    
      Pregunta p1=new Pregunta("Capital de Rusia", opciones);
      Pregunta p2=new Pregunta("Capital de China", opciones2);
      Pregunta p3=new Pregunta("Nuevo nombre de la Capital de México", opciones3);
-      
+     Pregunta p4=new Pregunta("Capital de Guadalajara", opciones4);
+     Pregunta p5=new Pregunta("Capital de Monterrey", opciones5);
+     
     ArrayList<Pregunta> preguntas=new ArrayList<Pregunta>();
      preguntas.add(p1);
      preguntas.add(p2);
      preguntas.add(p3);
-      
+     preguntas.add(p4);
+     
       return preguntas; 
       
       
