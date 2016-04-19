@@ -50,6 +50,21 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     Opcion o26p7=new Opcion("Maputo",true);
     Opcion o27p7=new Opcion("Mozambique",false);
     
+    Opcion o28p8=new Opcion("Mayote", false);
+    Opcion o29p8=new Opcion("Florencia",false);
+    Opcion o30p8=new Opcion("Roma",true);
+    Opcion o31p8=new Opcion("Mozambique",false);
+    
+    Opcion o32p9=new Opcion("Mayote", false);
+    Opcion o33p9=new Opcion("Florencia",false);
+    Opcion o34p9=new Opcion("Roma",false);
+    Opcion o35p9=new Opcion("Washington",true);
+    
+    Opcion o36p10=new Opcion("Mérida", true);
+    Opcion o37p10=new Opcion("Florencia",false);
+    Opcion o38p10=new Opcion("Roma",false);
+    Opcion o39p10=new Opcion("Washington",false);
+    
     ArrayList<Opcion> opciones=new ArrayList<Opcion>();
     opciones.add(o1);
     opciones.add(o2);
@@ -92,6 +107,24 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     opciones7.add(o26p7);
     opciones7.add(o27p7);
     
+    ArrayList<Opcion> opciones8=new ArrayList<Opcion>();
+    opciones8.add(o28p8);
+    opciones8.add(o29p8);
+    opciones8.add(o30p8);
+    opciones8.add(o31p8);
+    
+    ArrayList<Opcion> opciones9=new ArrayList<Opcion>();
+    opciones9.add(o32p9);
+    opciones9.add(o33p9);
+    opciones9.add(o34p9);
+    opciones9.add(o35p9);
+    
+    ArrayList<Opcion> opciones10=new ArrayList<Opcion>();
+    opciones10.add(o36p10);
+    opciones10.add(o37p10);
+    opciones10.add(o38p10);
+    opciones10.add(o39p10);
+    
      Pregunta p1=new Pregunta("Capital de Rusia", opciones);
      Pregunta p2=new Pregunta("Capital de China", opciones2);
      Pregunta p3=new Pregunta("Nuevo nombre de la Capital de México", opciones3);
@@ -99,6 +132,9 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
      Pregunta p5=new Pregunta("Capital de Nuevo León", opciones5);
      Pregunta p6=new Pregunta("Capital de Cuba", opciones6);
      Pregunta p7=new Pregunta("Capital de Mozambique", opciones7);
+     Pregunta p8=new Pregunta("Capital de Italia", opciones8);
+     Pregunta p9=new Pregunta("Capital de Estados Unidos", opciones9);
+     Pregunta p10=new Pregunta("Capital de Yucatán", opciones10);
      
     ArrayList<Pregunta> preguntas=new ArrayList<Pregunta>();
      preguntas.add(p1);
@@ -107,6 +143,10 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
      preguntas.add(p4);
      preguntas.add(p5);
      preguntas.add(p6);
+     preguntas.add(p7);
+     preguntas.add(p8);
+     preguntas.add(p9);
+     preguntas.add(p10);
      
       return preguntas; 
       
