@@ -30,7 +30,7 @@ public class TestBasico extends javax.swing.JFrame {
         initComponents();
         
        
-       t1.start();
+       
                
         iniciarTodas();
             

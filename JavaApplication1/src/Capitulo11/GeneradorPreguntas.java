@@ -35,10 +35,20 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     Opcion o14p4=new Opcion("CDMX", false);
     Opcion o15p4=new Opcion("Puebla", false);
     
-    Opcion o16p5=new Opcion("Jalisco", true);
+    Opcion o16p5=new Opcion("Monterrey", true);
     Opcion o17p5=new Opcion("Yucatán", false);
     Opcion o18p5=new Opcion("CDMX", false);
     Opcion o19p5=new Opcion("Puebla", false);
+    
+    Opcion o20p6=new Opcion("Mayote", false);
+    Opcion o21p6=new Opcion("Florencia",false);
+    Opcion o22p6=new Opcion("Habana",true);
+    Opcion o23p6=new Opcion("Mozambique",false);
+    
+    Opcion o24p7=new Opcion("Mayote", false);
+    Opcion o25p7=new Opcion("Florencia",false);
+    Opcion o26p7=new Opcion("Maputo",true);
+    Opcion o27p7=new Opcion("Mozambique",false);
     
     ArrayList<Opcion> opciones=new ArrayList<Opcion>();
     opciones.add(o1);
@@ -70,17 +80,33 @@ public static ArrayList<Pregunta>obtenerTodasLasPeguntas(){
     opciones5.add(o18p5);
     opciones5.add(o19p5);
     
+    ArrayList<Opcion> opciones6=new ArrayList<Opcion>();
+    opciones6.add(o20p6);
+    opciones6.add(o21p6);
+    opciones6.add(o22p6);
+    opciones6.add(o23p6);
+    
+    ArrayList<Opcion> opciones7=new ArrayList<Opcion>();
+    opciones7.add(o24p7);
+    opciones7.add(o25p7);
+    opciones7.add(o26p7);
+    opciones7.add(o27p7);
+    
      Pregunta p1=new Pregunta("Capital de Rusia", opciones);
      Pregunta p2=new Pregunta("Capital de China", opciones2);
      Pregunta p3=new Pregunta("Nuevo nombre de la Capital de México", opciones3);
      Pregunta p4=new Pregunta("Capital de Guadalajara", opciones4);
-     Pregunta p5=new Pregunta("Capital de Monterrey", opciones5);
+     Pregunta p5=new Pregunta("Capital de Nuevo León", opciones5);
+     Pregunta p6=new Pregunta("Capital de Cuba", opciones6);
+     Pregunta p7=new Pregunta("Capital de Mozambique", opciones7);
      
     ArrayList<Pregunta> preguntas=new ArrayList<Pregunta>();
      preguntas.add(p1);
      preguntas.add(p2);
      preguntas.add(p3);
      preguntas.add(p4);
+     preguntas.add(p5);
+     preguntas.add(p6);
      
       return preguntas; 
       
